@@ -4,7 +4,7 @@ const grid = document.querySelector("#grid");
     // Create grid square
 let gridSq = document.createElement("div");
     //Define grid square style
-gridSq.setAttribute = ("style", "outline: 1px, red, solid;");
+gridSq.setAttribute("style", "border: 1px, red, solid");
     // Ask user for grid size 
     // Place grid squares in flexbox depending on user answer 
 grid.appendChild(gridSq);
