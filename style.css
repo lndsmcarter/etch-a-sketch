@@ -1,10 +1,14 @@
 body {
     background-color: black;
+    text-align: center;
 }
 
 
 #grid {
+    width: auto;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 
