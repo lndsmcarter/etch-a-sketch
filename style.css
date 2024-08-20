@@ -4,9 +4,17 @@ body {
     color: white;
 }
 
+#console {
+    display: flex;
+    justify-content: center;
+}
 
 #grid {
-    width: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: space-around;
     align-items: center;
