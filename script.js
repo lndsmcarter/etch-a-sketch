@@ -9,11 +9,17 @@ grid.appendChild(gridSq);
 let gridSqTwo = gridSq.cloneNode(true);
 grid.appendChild(gridSqTwo);
 
-//
+//Create a for loop that creates gridSq clones until the grid is full 
+function createGrid() {
+    for (let i = 0; i < 9; i++) {
+        let gridSqTwo = gridSq.cloneNode(true);
+        grid.appendChild(gridSqTwo);
+    }
+}
 
-    // Ask user for grid size 
-    // Place grid squares in flexbox depending on user answer 
+// Ask user for grid size 
+// Place grid squares in flexbox depending on user answer 
 
-    // FILL THE GRID
-    // Create a event listener for hovering over squares 
-    // Use the event listener to change square style 
+// FILL THE GRID
+// Create a event listener for hovering over squares 
+// Use the event listener to change square style 
