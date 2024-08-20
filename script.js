@@ -1,11 +1,10 @@
-let grid = document.querySelector("#grid");
+const grid = document.querySelector("#grid");
 
 // MAKE THE GRID
     // Create grid square
 let gridSq = document.createElement("div");
     //Define grid square style
 gridSq.setAttribute = ("style", "outline: 1px, red, solid;");
-gridSq.style.width = "8px;";
     // Ask user for grid size 
     // Place grid squares in flexbox depending on user answer 
 grid.appendChild(gridSq);
