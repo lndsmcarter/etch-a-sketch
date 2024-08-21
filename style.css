@@ -10,9 +10,6 @@ body {
 }
 
 #grid {
-    border-width: 1px;
-    border-style: solid;
-    border-color: red;
     display: flex;
     justify-content: center;
     align-items: top;

@@ -1,6 +1,6 @@
 const grid = document.querySelector("#grid");
-    let gridSize = 400
-    grid.setAttribute("style", "border: 1px, red, solid; width: ${gridSize}; height: ${gridSize};");
+    let gridSize = 400;
+    grid.setAttribute("style", `border: 1px, red, solid; width: ${gridSize + 10}px; height: ${gridSize + 10}px;`);
 
 //Ask user for grid size (via number of squares on one side) and put into variable gridSize
 let input = document.querySelector("#gridSize")
@@ -9,6 +9,7 @@ let gridDimension
 
 //Create function for button press
 function btnPress() {
+    
     let inVal = input.value;
     gridDimension = Number(inVal);
     
@@ -17,7 +18,7 @@ function btnPress() {
     function createGrid(len) {
         for (let i = 0; i < (gridDimension * gridDimension); i++) {
             let gridSq = document.createElement("div");
-            gridSq.setAttribute("style", "border: 1px, red, solid; width: ${len}; height: ${len};");
+            gridSq.setAttribute("style", `border: 1px, red, solid; width: ${len}px; height: ${len}px;`);
             grid.appendChild(gridSq);
         }
     }
