@@ -1,5 +1,5 @@
 const grid = document.querySelector("#grid");
-    let gridSize = 500
+    let gridSize = 400
     grid.setAttribute("style", "border: 1px, red, solid; width: ${gridSize}; height: ${gridSize};");
 
 //Ask user for grid size (via number of squares on one side) and put into variable gridSize
