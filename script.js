@@ -1,20 +1,39 @@
 const grid = document.querySelector("#grid");
+    let gridSize = 500
+    grid.setAttribute("style", "border: 1px, red, solid; width: ${gridSize}; height: ${gridSize};");
 
-// MAKE THE GRID
-    // Create grid square
-    //Define grid square style
+//Ask user for grid size (via number of squares on one side) and put into variable gridSize
+let input = document.querySelector("#gridSize")
+let btn = document.querySelector("button")
+let gridDimension
 
+//Create function for button press
+function btnPress() {
+    let inVal = input.value;
+    gridDimension = Number(inVal);
+    
+    let gridSqLen = (gridSize / gridDimension)
 
-//Create a for loop that creates gridSq clones until the grid is full 
-function createGrid() {
-    for (let i = 0; i < 9; i++) {
-        let gridSq = document.createElement("div");
-        gridSq.setAttribute("style", "border: 1px, red, solid; width: 100px; height: 100px;");
-        grid.appendChild(gridSq);
+    function createGrid(len) {
+        for (let i = 0; i < (gridDimension * gridDimension); i++) {
+            let gridSq = document.createElement("div");
+            gridSq.setAttribute("style", "border: 1px, red, solid; width: ${len}; height: ${len};");
+            grid.appendChild(gridSq);
+        }
     }
+
+    createGrid(gridSqLen);
 }
 
-createGrid();
+btn.addEventListener("click", btnPress);
+
+
+//Divide length of grid by gridDimension and save into a variable, gridSqLen
+//Use gridSqLen to determine the size of gridSq
+//Use for loop with i< (gridSize * gridSize)
+
+//Create a for loop that creates gridSq's until the grid is full 
+
 
 // Ask user for grid size 
 // Place grid squares in flexbox depending on user answer 
