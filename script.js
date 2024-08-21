@@ -1,6 +1,6 @@
 const grid = document.querySelector("#grid");
-    let gridSize = 400;
-    grid.setAttribute("style", `border: 1px, red, solid; width: ${gridSize + 20}px; height: ${gridSize + 20}px; margin: 50px;`);
+    let gridSize = 950;
+    grid.setAttribute("style", `border: red, solid; width: ${gridSize}px; height: ${gridSize}px; margin: 50px;`);
 
 //Ask user for grid size (via number of squares on one side) and put into variable gridSize
 let input = document.querySelector("#gridSize")
@@ -18,7 +18,7 @@ function btnPress() {
     function createGrid(len) {
         for (let i = 0; i < (gridDimension * gridDimension); i++) {
             let gridSq = document.createElement("div");
-            gridSq.setAttribute("style", `border: 1px, red, solid; width: ${len}px; height: ${len}px;`);
+            gridSq.setAttribute("style", `border: 1px, red, solid; margin: 0px; width: ${len - 2}px; height: ${len - 2}px;`);
             grid.appendChild(gridSq);
         }
     }
