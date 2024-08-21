@@ -9,7 +9,7 @@ let gridDimension
 
 //Create function for button press
 function btnPress() {
-    
+    grid.innerHTML = "";
     let inVal = input.value;
     gridDimension = Number(inVal);
     
@@ -23,7 +23,7 @@ function btnPress() {
         }
     }
 
-    createGrid(gridSqLen);
+    createGrid(gridSqLen);    
 }
 
 btn.addEventListener("click", btnPress);
