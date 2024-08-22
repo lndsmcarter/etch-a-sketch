@@ -21,18 +21,24 @@ function btnPress() {
         for (let i = 0; i < (gridDimension * gridDimension); i++) {
            
             gridSq = document.createElement("div");
+            gridSq.id = "gridSq";
             gridSq.setAttribute("style", `border: 1px, red, solid; margin: 0px; width: ${len - 2}px; height: ${len - 2}px;`);
             grid.appendChild(gridSq);
-            gridSq.onmouseover = function() {
-                gridSq.style.backgroundColor = "purple";
-            }
+            
         }
     }
+    
     
     createGrid(gridSqLen);    
 }
 
- btn.addEventListener("click", btnPress);
+let gridHover = document.querySelectorAll("#gridSq");
+
+    gridHover.onmouseover = function() {
+        gridSq.style.backgroundColor = "purple";
+    }
+
+btn.addEventListener("click", btnPress);
 
 //Divide length of grid by gridDimension and save into a variable, gridSqLen
 //Use gridSqLen to determine the size of gridSq
