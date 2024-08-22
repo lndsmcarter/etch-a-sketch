@@ -14,6 +14,13 @@ function btnPress() {
     grid.innerHTML = "";
     let inVal = input.value;
     gridDimension = Number(inVal);
+
+    if ((gridDimension > 100) ||
+        (gridDimension < 1) || 
+        (isNaN(gridDimension) == true)) {
+            alert("Invalid Entry");
+            return;
+    };
     
     let gridSqLen = (gridSize / gridDimension)
 
