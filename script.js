@@ -32,13 +32,21 @@ function btnPress() {
     createGrid(gridSqLen);    
 }
 
-function onHover() {
-    style.backgroundColor = "purple";
+// Set a function to change the background color of gridSq divs
+function onHover(value) {
+    function sketch() {
+        value.style.backgroundColor = "purple";
+        console.log(gridSq)
+    }
+    value.addEventListener("mouseover", sketch);
 };
 
+// Use QuerySelectorAll to select all #gridSq items 
 let allBoxes = document.querySelectorAll("#gridSq");
-let allBoxesArray = Array.from(allBoxes);
 
+// Create an array from the allBoxes variable
+let allBoxesArray = Array.from(allBoxes);
+console.log(allBoxesArray);
 allBoxesArray.forEach(onHover);
 
 
