@@ -25,7 +25,7 @@ function btnPress() {
         for (let i = 0; i < (gridDimension * gridDimension); i++) {
             gridSq = document.createElement("div");
             gridSq.id = "gridSq";
-            gridSq.setAttribute("style", `border: 1px, darkgrey, solid; margin: 0px; width: ${len - 2.66}px; height: ${len - 2.66}px;`);
+            gridSq.setAttribute("style", `border: 1px, darkgrey, solid; margin: 0px; width: ${len - 2}px; height: ${len - 2}px;`);
             grid.appendChild(gridSq);
         }
     }
