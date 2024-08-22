@@ -32,11 +32,15 @@ function btnPress() {
     createGrid(gridSqLen);    
 }
 
-let gridHover = document.querySelectorAll("#gridSq");
+function onHover() {
+    style.backgroundColor = "purple";
+};
 
-    gridHover.onmouseover = function() {
-        gridSq.style.backgroundColor = "purple";
-    }
+let allBoxes = document.querySelectorAll("#gridSq");
+let allBoxesArray = Array.from(allBoxes);
+
+allBoxesArray.forEach(onHover);
+
 
 btn.addEventListener("click", btnPress);
 
