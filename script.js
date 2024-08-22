@@ -30,25 +30,26 @@ function btnPress() {
     
     
     createGrid(gridSqLen);    
-}
+
 
 // Set a function to change the background color of gridSq divs
-function onHover(value) {
-    function sketch() {
-        value.style.backgroundColor = "purple";
-        console.log(gridSq)
-    }
-    value.addEventListener("mouseover", sketch);
-};
+    function onHover(value) {
+        console.log("test")
+        function sketch() {
+            value.style.backgroundColor = "purple";
+            console.log(gridSq)
+        }
+        value.addEventListener("mouseover", sketch);
+    };
 
-// Use QuerySelectorAll to select all #gridSq items 
-let allBoxes = document.querySelectorAll("#gridSq");
+    // Use QuerySelectorAll to select all #gridSq items 
+    let allBoxes = document.querySelectorAll("#gridSq");
 
-// Create an array from the allBoxes variable
-let allBoxesArray = Array.from(allBoxes);
-console.log(allBoxesArray);
-allBoxesArray.forEach(onHover);
-
+    // Create an array from the allBoxes variable
+    let allBoxesArray = Array.from(allBoxes);
+    console.log(allBoxesArray);
+    allBoxesArray.forEach(onHover);
+}
 
 btn.addEventListener("click", btnPress);
 
