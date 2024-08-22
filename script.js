@@ -6,6 +6,8 @@ const grid = document.querySelector("#grid");
 let input = document.querySelector("#gridSize")
 let btn = document.querySelector("button")
 let gridDimension
+let gridSq
+
 
 //Create function for button press
 function btnPress() {
@@ -17,17 +19,20 @@ function btnPress() {
 
     function createGrid(len) {
         for (let i = 0; i < (gridDimension * gridDimension); i++) {
-            let gridSq = document.createElement("div");
+           
+            gridSq = document.createElement("div");
             gridSq.setAttribute("style", `border: 1px, red, solid; margin: 0px; width: ${len - 2}px; height: ${len - 2}px;`);
             grid.appendChild(gridSq);
+            gridSq.onmouseover = function() {
+                gridSq.style.backgroundColor = "purple";
+            }
         }
     }
-
+    
     createGrid(gridSqLen);    
 }
 
-btn.addEventListener("click", btnPress);
-
+ btn.addEventListener("click", btnPress);
 
 //Divide length of grid by gridDimension and save into a variable, gridSqLen
 //Use gridSqLen to determine the size of gridSq
