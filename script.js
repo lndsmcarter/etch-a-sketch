@@ -25,17 +25,26 @@ function btnPress() {
         for (let i = 0; i < (gridDimension * gridDimension); i++) {
             gridSq = document.createElement("div");
             gridSq.id = "gridSq";
-            gridSq.setAttribute("style", `border: 1px, lightgrey, solid; margin: 0px; width: ${len - 2}px; height: ${len - 2}px;`);
+            gridSq.setAttribute("style", `border: 1px, lightgrey, solid; margin: 0px; width: ${len - 2.66}px; height: ${len - 2.66}px;`);
             grid.appendChild(gridSq);
         }
     }
     
     createGrid(gridSqLen);    
 
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      };
+
     function onHover(value) {
         console.log("test")
         function sketch() {
-            value.style.backgroundColor = "white";
+            value.style.backgroundColor = getRandomColor();
         }
         value.addEventListener("mouseover", sketch);
     };
