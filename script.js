@@ -1,11 +1,11 @@
-const grid = document.querySelector("#grid");
-    let gridSize = 950;
-    grid.setAttribute("style", `border: darkgrey, solid; width: ${gridSize}px; height: ${gridSize}px; margin: 50px;`);
-
 let input = document.querySelector("#gridSize")
 let btn = document.querySelector("button")
 let gridDimension
 let gridSq
+
+const grid = document.querySelector("#grid");
+    let gridSize = 950;
+    grid.setAttribute("style", `border: darkgrey, solid; width: ${gridSize}px; height: ${gridSize}px; margin: 50px;`);
 
 function btnPress() {
     grid.innerHTML = "";
@@ -32,10 +32,18 @@ function btnPress() {
     
     createGrid(gridSqLen);    
 
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
     function onHover(value) {
-        console.log("test")
         function sketch() {
-            value.style.backgroundColor = "white";
+            value.style.backgroundColor = getRandomColor();
         }
         value.addEventListener("mouseover", sketch);
     };
