@@ -1,6 +1,6 @@
 const grid = document.querySelector("#grid");
     let gridSize = 950;
-    grid.setAttribute("style", `border: red, solid; width: ${gridSize}px; height: ${gridSize}px; margin: 50px;`);
+    grid.setAttribute("style", `border: darkgrey, solid; width: ${gridSize}px; height: ${gridSize}px; margin: 50px;`);
 
 //Ask user for grid size (via number of squares on one side) and put into variable gridSize
 let input = document.querySelector("#gridSize")
@@ -19,35 +19,25 @@ function btnPress() {
 
     function createGrid(len) {
         for (let i = 0; i < (gridDimension * gridDimension); i++) {
-           
             gridSq = document.createElement("div");
             gridSq.id = "gridSq";
-            gridSq.setAttribute("style", `border: 1px, red, solid; margin: 0px; width: ${len - 2}px; height: ${len - 2}px;`);
+            gridSq.setAttribute("style", `border: 1px, lightgrey, solid; margin: 0px; width: ${len - 2}px; height: ${len - 2}px;`);
             grid.appendChild(gridSq);
-            
         }
     }
     
-    
     createGrid(gridSqLen);    
 
-
-// Set a function to change the background color of gridSq divs
     function onHover(value) {
         console.log("test")
         function sketch() {
-            value.style.backgroundColor = "purple";
-            console.log(gridSq)
+            value.style.backgroundColor = "white";
         }
         value.addEventListener("mouseover", sketch);
     };
 
-    // Use QuerySelectorAll to select all #gridSq items 
     let allBoxes = document.querySelectorAll("#gridSq");
-
-    // Create an array from the allBoxes variable
     let allBoxesArray = Array.from(allBoxes);
-    console.log(allBoxesArray);
     allBoxesArray.forEach(onHover);
 }
 
